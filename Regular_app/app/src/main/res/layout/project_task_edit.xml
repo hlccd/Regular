@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/project_task_edit_occupy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/project_task_edit_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/secondary_circle_bead"
+        app:layout_constraintHeight_percent="0.618"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/project_task_edit_occupy"
+        app:layout_constraintWidth_percent="0.8">
+
+        <EditText
+            android:id="@+id/project_task_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="任务名"
+            android:textColor="@color/mainColor"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/secondaryColor"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_name" />
+
+        <ImageButton
+            android:id="@+id/project_task_edit_minus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/secondary_minus"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/project_task_edit_difficulty"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="☆☆☆☆☆"
+            android:textColor="@color/secondaryColor"
+            android:textSize="30dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintLeft_toRightOf="@+id/project_task_edit_minus"
+            app:layout_constraintRight_toLeftOf="@+id/project_task_edit_plus"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <ImageButton
+            android:id="@+id/project_task_edit_plus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/secondary_plus"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/project_task_edit_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="标签："
+            android:textColor="@color/mainColor"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_difficulty" />
+
+        <EditText
+            android:id="@+id/project_task_edit_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="标签"
+            android:textColor="@color/secondaryColor"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toRightOf="@+id/project_task_edit_label_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_difficulty" />
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/secondaryColor"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_label" />
+
+        <TextView
+            android:id="@+id/project_task_edit_number_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="总完成次数："
+            android:textColor="@color/mainColor"
+            android:textSize="15dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            app:layout_constraintWidth_percent="1" />
+
+        <TextView
+            android:id="@+id/project_task_edit_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/secondaryColor"
+            android:textSize="25dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_number_text"
+            app:layout_constraintWidth_percent="1" />
+
+        <TextView
+            android:id="@+id/project_task_edit_duration_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="总执行时间(min)："
+            android:textColor="@color/mainColor"
+            android:textSize="15dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_number"
+            app:layout_constraintWidth_percent="1" />
+
+        <TextView
+            android:id="@+id/project_task_edit_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/secondaryColor"
+            android:textSize="25dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_duration_text"
+            app:layout_constraintWidth_percent="1" />
+
+        <TextView
+            android:id="@+id/project_task_edit_remark_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="备注："
+            android:textColor="@color/mainColor"
+            android:textSize="15dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_duration"
+            app:layout_constraintWidth_percent="1" />
+
+        <EditText
+            android:id="@+id/project_task_edit_remark"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="备注"
+            android:textColor="@color/mainColor"
+            android:textSize="20dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/project_task_edit_timestamp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/project_task_edit_remark_text"
+            app:layout_constraintWidth_percent="1" />
+
+        <TextView
+            android:id="@+id/project_task_edit_timestamp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="xxxx-xx-xx xx:xx:xx"
+            android:textColor="@color/secondaryColor"
+            android:textSize="25dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/project_task_edit_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/secondary_circle_bead"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/secondaryColor"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="@+id/project_task_edit_layout"
+        app:layout_constraintTop_toBottomOf="@+id/project_task_edit_layout" />
+
+    <Button
+        android:id="@+id/project_task_edit_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/secondary_circle_bead"
+        android:gravity="center"
+        android:text="编辑"
+        android:textColor="@color/secondaryColor"
+        android:textSize="30dp"
+        app:layout_constraintRight_toRightOf="@+id/project_task_edit_layout"
+        app:layout_constraintTop_toBottomOf="@+id/project_task_edit_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
